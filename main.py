@@ -8,4 +8,4 @@ spark = SparkSession.builder \
 print("Spark session created successfully!")
 
 # Tắt Spark session
-spark.stop()
+spark.stop()    
