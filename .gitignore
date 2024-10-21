@@ -8,7 +8,7 @@
 *.log
 
 # File cấu hình môi trường
-.env
+env/
 
 # Các file tạm thời
 *~
