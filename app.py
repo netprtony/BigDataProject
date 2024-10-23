@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 # Kết nối tới MongoDB
 client = MongoClient('mongodb://localhost:27017/')
-db = client['Sleep_heathy']
-collection = db['Person']
+db = client['database']
+collection = db['Sleep_Heathy']
 
 @app.route('/')
 def home():
@@ -26,8 +26,9 @@ def home():
                            avg_stress_level=avg_stress_level,
                            avg_physical_activity=avg_physical_activity)
 
-
-
+@app.route('/thongke')
+def thongke():
+    return render_template('tableau.html')
 
 @app.route('/export_csv')
 def export_csv():
