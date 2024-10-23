@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Sleep Data List
+{% endblock %}
+
+{% block content %}
+<h2>Sleep Data List</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Person ID</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Occupation</th>
+            <th>Sleep Duration</th>
+            <th>Quality of Sleep</th>
+            <th>Physical Activity Level</th>
+            <th>Stress Level</th>
+            <th>BMI Category</th>
+            <th>Blood Pressure</th>
+            <th>Heart Rate</th>
+            <th>Daily Steps</th>
+            <th>Sleep Disorder</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in sleep_data %}
+        <tr>
+            <td>{{ data['Person ID'] }}</td>
+            <td>{{ data['Gender'] }}</td>
+            <td>{{ data['Age'] }}</td>
+            <td>{{ data['Occupation'] }}</td>
+            <td>{{ data['Sleep Duration'] }}</td>
+            <td>{{ data['Quality of Sleep'] }}</td>
+            <td>{{ data['Physical Activity Level'] }}</td>
+            <td>{{ data['Stress Level'] }}</td>
+            <td>{{ data['BMI Category'] }}</td>
+            <td>{{ data['Blood Pressure'] }}</td>
+            <td>{{ data['Heart Rate'] }}</td>
+            <td>{{ data['Daily Steps'] }}</td>
+            <td>{{ data['Sleep Disorder'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Application{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Sleep Data Management</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/add">Add Sleep Data</a>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        <!-- Nội dung sẽ được chèn ở đây -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sleep Data System</p>
+    </footer>
+</body>
+</html>
